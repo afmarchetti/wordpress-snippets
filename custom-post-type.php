@@ -3,12 +3,12 @@
 /* ------------------------------------------------------------------------- *
  *   Create CUSTOM POST TYPE
  *
- *   Change my_cpt with the slug name of your post type
+ *   Change my_service_cpt with the slug name of your post type
 /* ------------------------------------------------------------------------- */
 
-add_action('init', 'create_my_cpt');
+add_action('init', 'create_my_service_cpt');
 
-function create_my_cpt() {
+function create_my_service_cpt() {
 
     $labels = array(
         'name'               => __('Services' , 'fullbase-plugin'),
@@ -42,7 +42,7 @@ function create_my_cpt() {
 
     );
 
-   register_post_type('my_cpt', $args);
+   register_post_type('my_service_cpt', $args);
 }
 
 ?>
