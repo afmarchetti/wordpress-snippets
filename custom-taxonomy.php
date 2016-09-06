@@ -3,9 +3,9 @@
 /* ------------------------------------------------------------------------- *
  *   Create CUSTOM TAXONOMY
  *
- *   Change my_service_cpt with the slug name of your post type
- *	 Change service_category_tax with the slug name of your taxonomy
- *   Change service-category with your url taxonomy slug
+ *	Change my_service_cpt with the slug name of your post type
+ *	Change service_category_tax with the slug name of your taxonomy
+ *	Change service-category with your url taxonomy slug
 /* ------------------------------------------------------------------------- */
 
 /**
