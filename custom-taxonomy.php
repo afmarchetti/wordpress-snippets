@@ -16,7 +16,7 @@ add_action( 'init', 'create_service_category_tax' );
 function create_service_category_tax() {
 
     $labels = array(
-			'name'			=> __('Categories', 'language-slug'),
+			'name'		=> __('Categories', 'language-slug'),
 			'singular_name'     => __('Category', 'language-slug'),
 			'add_new_item'      => __('Add Category', 'language-slug'),
 			'edit_item'         => __('Edit Category', 'language-slug'),
