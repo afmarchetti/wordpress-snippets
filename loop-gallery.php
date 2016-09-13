@@ -1,7 +1,7 @@
 <?php
 
 /* ------------------------------------------------------------------------- *
- *   Loop Gallery
+ *   Custom Loop Gallery
  *
  *   1) add the remove shortcode code in functions.php
  *   2) insert the loop code in page.php or post.php	
@@ -18,7 +18,10 @@
 	}
 	add_filter('the_content', 'remove_gallery');
 	*/
-				
+	
+
+	/* Loop */	
+	
 	$counter = 0;
 
 	$gallery = get_post_gallery( $post->ID, false );
@@ -44,9 +47,9 @@
 			
 		</div>
 	
-	<?php	} //end foreach
+	<?php	} /* end foreach */
 	
-	} //end if gallery
+	} /* end if gallery */
 
 ?>
 
