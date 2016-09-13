@@ -8,7 +8,7 @@
 /* ------------------------------------------------------------------------- */
 
 
-  /*  Remove default gallery shortcode from page and post (insert in functions.php) */
+	/*  Remove default gallery shortcode from page and post (insert in functions.php) */
 	/*
 	function remove_gallery($content) {
 	  if ( 'page' == get_post_type() || 'post' == get_post_type()) {
