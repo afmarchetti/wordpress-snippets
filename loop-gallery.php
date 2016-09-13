@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------- *
  *   Loop Gallery
  *
- *   1) add the remove code in functions.php
+ *   1) add the remove shortcode code in functions.php
  *   2) insert the loop code in page.php or post.php	
 /* ------------------------------------------------------------------------- */
 
