@@ -22,8 +22,6 @@
 
 	/* Loop */	
 	
-	$counter = 0;
-
 	$gallery = get_post_gallery( $post->ID, false );
 
 	if($gallery != ''){
