@@ -7,6 +7,12 @@ A collection of Wordpress utilities by [MarchettiDesign.net](http://www.marchett
 
 - Custom Post Type
 
+- Custom Taxonomy
+
+- Custom Gallery Loop
+
+- Custom Loop with Numeric Pagination
+
 
 ## Usage
 Copy and paste the snippets.
