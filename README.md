@@ -13,6 +13,16 @@ A collection of Wordpress utilities by [MarchettiDesign.net](http://www.marchett
 
 - Custom Loop with Numeric Pagination
 
+- Taxonomy Menu
+
+- Custom Image Background
+
+- Custom Loop with Custom Template Pages
+
+- Optimize Woocommerce Enqueue Scripts
+
+- Bootstrap Nav Walker with Images
+
 
 ## Usage
 Copy and paste the snippets.
