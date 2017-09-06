@@ -1,9 +1,9 @@
-#WordPress Snippets Snippets
+# WordPress Snippets Snippets
 
 A collection of WordPress utilities by [MarchettiDesign.net](http://www.marchettidesign.net/)
 
 
-##List of the utilities
+## List of the utilities
 
 - Custom Post Type
 
