@@ -1,27 +1,31 @@
-#Wordpress Snippets Snippets
+#WordPress Snippets Snippets
 
-A collection of Wordpress utilities by [MarchettiDesign.net](http://www.marchettidesign.net/)
+A collection of WordPress utilities by [MarchettiDesign.net](http://www.marchettidesign.net/)
 
 
 ##List of the utilities
 
 - Custom Post Type
 
-- Custom Taxonomy
+- Basic Functions.php
 
-- Custom Gallery Loop
+- Gallery Loop
 
-- Custom Loop with Numeric Pagination
+- Image Background Single Post / Page
+
+- Loop Custom
+
+- Loop with Pagination
+
+- Loop with filter based on Template selected
+
+- Loop Standard
 
 - Taxonomy Menu
 
-- Custom Image Background
+- Taxonomy
 
-- Custom Loop with Custom Template Pages
-
-- Optimize Woocommerce Enqueue Scripts
-
-- Bootstrap Nav Walker with Images
+- Woocommerce Scripts Optimizations
 
 
 ## Usage
