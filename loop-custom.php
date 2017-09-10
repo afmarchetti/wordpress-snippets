@@ -8,32 +8,33 @@
 ?>
 <?php
 
-	/* Wp Query page in menu order */
+	/* Wp Query - page + menu order */
+
 	$custom_post = new WP_Query( array(
 			'post_type'			=> 'page',
 			'posts_per_page'=> 3,
 	    'orderby' => 'menu_order',
 	    'order' => 'ASC',
-		),
-	) );
+	));
 
-	/* Wp Query page in menu order + taxonomy */
+	/* Wp Query - page + taxonomy + menu order */
+
 	// $custom_post = new WP_Query( array(
-	// 		'post_type'			=> 'page',
-	// 		'posts_per_page'=> 3,
-	//     'orderby' => 'menu_order',
-	//     'order' => 'ASC',
-	// 		'tax_query' => array(
-  //       array(
-  //         'taxonomy' => 'home_positions',
-  //         'field' => 'slug',
-  //         'terms' => 'top'
-  //       )
-  //     )
-	// 	),
-	// ) );
+	// 	'post_type'			=> 'page',
+	// 	'posts_per_page'=> 3,
+	// 	'orderby' => 'menu_order',
+	// 	'order' => 'ASC',
+	// 	'tax_query' => array(
+	// 		array(
+	// 			'taxonomy' => 'home_positions',
+	// 			'field' => 'slug',
+	// 			'terms' => 'top'
+	// 		)
+	// 	)
+	// ));
 
-	/* Wp Query post + taxonomy */
+	/* Wp Query - post + taxonomy */
+
 	// $custom_post = new WP_Query( array(
 	// 	'post_type'			=> 'post',
 	// 	'tax_query' => array(
@@ -41,17 +42,31 @@
 	// 			'taxonomy' => 'people',
 	// 			'field'    => 'slug',
 	// 			'terms'    => 'bob',
-	// 		),
-	// 	),
-	// ) );
+	// 		)
+	// 	)
+	// ));
 
-	/* Wp Query post + category */
+	/* Wp Query - post + category */
+
 	// $custom_post = new WP_Query( array(
 	// 		'post_type'			=> 'post',
 	// 		'category_name' => 'news',
 	// 		'posts_per_page'=> 3,
-	// 	),
-	// ) );
+	// ));
+
+
+  /* Wp Query - sub pages + menu order */
+	
+	// $this_page_id = $wp_query->post->ID;
+	// $custom_post = new WP_Query( array(
+	// 	'post_type' => 'page',
+	// 	'post_parent' => $this_page_id,
+	// 	'posts_per_page' => 100,
+	// 	'orderby' => 'menu_order',
+	// 	'order' => 'ASC',
+	// ));
+
+
 
 ?>
 
