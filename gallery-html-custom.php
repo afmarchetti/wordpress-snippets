@@ -1,6 +1,6 @@
 <?php 
 
-/* Custom Gallery HTML
+/* Custom Gallery HTML (insert in functions.php)
 	
 --------------------------------------------------------------------- */
 
