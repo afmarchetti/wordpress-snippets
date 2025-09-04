@@ -1,3 +1,14 @@
+<?php
+/**
+ * Plugin Name: Site Custom Functions
+ * Description: Plugin che raccoglie funzioni custom. Aggiunge un testo all'email di conferma ordine se l'ordine contiene determinati product/variation ID.
+ * Version: 1.1.0
+ * Author: Marchetti Design
+ */
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Sicurezza: blocca accesso diretto
+
+
 add_action( 'woocommerce_email_before_order_table', 'am_add_text_for_specific_product', 10, 4 );
 
 function am_add_text_for_specific_product( $order, $sent_to_admin, $plain_text, $email ) {
