@@ -23,11 +23,11 @@ function am_add_text_for_specific_product( $order, $sent_to_admin, $plain_text, 
     }
 
     // ID prodotto/variazione da intercettare
-    $target_product_ids = array( 1234, 5678, 9012 );
+    $target_product_ids = array( 2186 );
 
     // Testi (HTML / Plain)
-    $text_html  = '<p><strong>Grazie! 🎉</strong> Ti contatteremo a breve via email per confermare la prenotazione.</p>';
-    $text_plain = "Grazie! 🎉 Ti contatteremo a breve via email per confermare la prenotazione.\n\n";
+    $text_html  = "<p><strong>Degustazione in cantina - </strong> Ti contatteremo a breve via email per confermare la prenotazione.</p>";
+    $text_plain = "Degustazione in cantina - Ti contatteremo a breve via email per confermare la prenotazione.\n\n";
 
     foreach ( $order->get_items( 'line_item' ) as $item ) {
         $product_id   = (int) $item->get_product_id();
