@@ -14,7 +14,7 @@ add_action( 'woocommerce_email_before_order_table', 'am_add_text_for_specific_pr
 function am_add_text_for_specific_product( $order, $sent_to_admin, $plain_text, $email ) {
 
     // Solo email cliente "ordine completato", non admin
-    if ( $sent_to_admin || ! isset( $email->id ) || $email->id !== 'customer_completed_order' ) {
+    if ( $sent_to_admin || ! isset( $email->id ) || $email->id !== 'customer_processing_order' ) {
         return;
     }
 
