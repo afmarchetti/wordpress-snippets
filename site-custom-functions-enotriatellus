@@ -1,40 +1,29 @@
-<?php
-/**
- * Plugin Name: Site Custom Functions
- * Description: Plugin che raccoglie le funzioni e personalizzazioni custom del sito.
- * Version: 1.0.0
- * Author: Marchetti Design
- */
-
-if (!defined('ABSPATH')) exit; // Sicurezza: blocca accesso diretto
-
-// Mostra un messaggio di test nella dashboard (area admin)
-add_action('admin_notices', function () {
-    echo '<div class="notice notice-success is-dismissible">
-		<p><strong>Messaggio di test</strong> — il plugin Site Custom Functions è attivo! 🚀</p>
-    </div>';
-});
-
-
-// Aggiunge testo all'email di conferma ordine se è presente un certo prodotto
 add_action( 'woocommerce_email_before_order_table', 'am_add_text_for_specific_product', 10, 4 );
 
 function am_add_text_for_specific_product( $order, $sent_to_admin, $plain_text, $email ) {
 
-    // Mostra solo nell'email di conferma ordine (non nelle altre)
-    if ( $email->id !== 'customer_completed_order' ) {
+    // Solo email cliente "ordine completato", non admin
+    if ( $sent_to_admin || ! isset( $email->id ) || $email->id !== 'customer_completed_order' ) {
         return;
     }
 
-    // ID del prodotto da controllare
-    $target_product_id = 1234; // <-- cambia con l’ID del tuo prodotto
+    if ( ! $order || ! is_a( $order, 'WC_Order' ) ) {
+        return;
+    }
 
-    // Controlla se l'ordine contiene quel prodotto
-    foreach ( $order->get_items() as $item ) {
-        if ( $item->get_product_id() == $target_product_id ) {
-            
-            // Testo personalizzato
-            echo '<p><strong>Grazie! 🎉</strong> Con questo prodotto hai accesso a un bonus speciale...</p>';
+    // ID prodotto/variazione da intercettare
+    $target_product_ids = array( 1234, 5678, 9012 );
+
+    // Testi (HTML / Plain)
+    $text_html  = '<p><strong>Grazie! 🎉</strong> Ti contatteremo a breve via email per confermare la prenotazione.</p>';
+    $text_plain = "Grazie! 🎉 Ti contatteremo a breve via email per confermare la prenotazione.\n\n";
+
+    foreach ( $order->get_items( 'line_item' ) as $item ) {
+        $product_id   = (int) $item->get_product_id();
+        $variation_id = (int) $item->get_variation_id();
+
+        if ( in_array( $product_id, $target_product_ids, true ) || ( $variation_id && in_array( $variation_id, $target_product_ids, true ) ) ) {
+            echo $plain_text ? wp_strip_all_tags( $text_plain ) : wp_kses_post( $text_html );
             break;
         }
     }
