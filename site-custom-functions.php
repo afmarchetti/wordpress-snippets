@@ -8,6 +8,7 @@
 
 if (!defined('ABSPATH')) exit; // Sicurezza: blocca accesso diretto
 
+
 // Mostra un messaggio di test nella dashboard (area admin)
 add_action('admin_notices', function () {
     echo '<div class="notice notice-success is-dismissible">
